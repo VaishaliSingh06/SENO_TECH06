@@ -1,38 +1,203 @@
-.App {
+.App{
+  text-align: center;
+  /* margin: 100px auto; */
+}
+/* product */
+#prolist{
+  text-align: center;
+  color:#ffff;
+}
+.main{
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+   rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 16px;
+  width: 250px;
+  text-align: center;
+  margin: 100px auto;
+  transition: transform 0.2s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card:hover {
+  transform: scale(1.05);
+}
+.card h3 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card p {
+  font-size: 1rem;
+  color: #666;
+  margin: 4px 0;
+}
+/* profile */
+.avtar {
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 25px;
+  width: fit-content;
+  margin: 0 auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  background-color: #f9f9f9; 
+}
+.avt{
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  background-color: cornflowerblue; 
+}
+/*  add two number */
+.number{
+  border: 6px solid #ccc;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}
+.number input{
+padding: 16px;
+}
+
+.button {
+  background-color: #04AA6D; 
+  border: none;
+  color: white;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* toggle */
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 34px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  left: 0;
+  top: 0;
+  border-radius: 10px; 
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+/* ItemList */
+.itemlist {
+  width:650px;
+  height: auto;
+  padding:15px;
+  margin: auto;
+  background-color: #b481eb;
+  border-radius: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.itemlist ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.itemlist li {
+  width: 250px;
+  margin: 10px;
+  background-color: white;
+  color: #000;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+              rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+              rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
+  padding: 16px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.itemlist li:hover {
+  transform: scale(1.03);
+}
+
+.add, .delete {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.delete {
+  background-color: #f44336;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.add:hover {
+  background-color: #03995c;
+}
+
+.delete:hover {
+  background-color: #d7332a;
 }
