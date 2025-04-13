@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SENO_TECH06/static/css/main.8e35f87d.css",
+    "main.js": "/SENO_TECH06/static/js/main.6e03f5ee.js",
+    "index.html": "/SENO_TECH06/index.html",
+    "main.8e35f87d.css.map": "/SENO_TECH06/static/css/main.8e35f87d.css.map",
+    "main.6e03f5ee.js.map": "/SENO_TECH06/static/js/main.6e03f5ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e35f87d.css",
+    "static/js/main.6e03f5ee.js"
+  ]
+}
